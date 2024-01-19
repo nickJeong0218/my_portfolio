@@ -12,11 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: DataValues.appTitleLong,
-        home: Scaffold(
-          body: SingleChildScrollView(
-              scrollDirection: Axis.vertical, child: DSAboutMe()),
-        ));
+    return MaterialApp(title: DataValues.appTitleLong, home: DSMainPage());
   }
 }

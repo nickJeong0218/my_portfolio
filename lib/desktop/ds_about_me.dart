@@ -212,16 +212,33 @@ class DSAboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        buildIntro(),
-        const SizedBox(height: 50),
-        buildNameCard(),
-        const SizedBox(height: 50),
-        buildResume(),
-        const SizedBox(height: 250),
-        buildTail(),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(DataValues.appTitleLong),
+        backgroundColor: Colors.green,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_outlined),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: ListView(
+          shrinkWrap: true,
+          physics: ClampingScrollPhysics(),
+          scrollDirection: Axis.vertical,
+          children: [
+            buildIntro(),
+            const SizedBox(height: 50),
+            buildNameCard(),
+            const SizedBox(height: 50),
+            buildResume(),
+            const SizedBox(height: 250),
+            buildTail(),
+          ],
+        ),
+      ),
     );
   }
 }
