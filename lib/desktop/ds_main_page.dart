@@ -92,8 +92,8 @@ class DSMainPage extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            alignment: WrapAlignment.center,
             children: [
               buildCategory('About Me', context),
               SizedBox(width: 40),
@@ -101,8 +101,8 @@ class DSMainPage extends StatelessWidget {
             ],
           ),
           SizedBox(height: 40),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            alignment: WrapAlignment.center,
             children: [
               buildCategory('Education', context),
               SizedBox(width: 40),
@@ -116,7 +116,7 @@ class DSMainPage extends StatelessWidget {
 
   Widget buildTail() {
     return Container(
-      child: const Column(
+      child: Column(
         children: [
           Text(
             '© 2021 Yunhwan Jeong. All rights reserved.',

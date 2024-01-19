@@ -58,7 +58,7 @@ class DSAboutMe extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.green, width: 2)),
-      child: Row(children: [
+      child: Wrap(children: [
         Image(
           image: const AssetImage('assets/profile.jpg'),
           width: 160,
@@ -68,7 +68,7 @@ class DSAboutMe extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [
+            Wrap(children: [
               Ink(
                 decoration: const ShapeDecoration(
                   color: Colors.green,
@@ -99,7 +99,7 @@ class DSAboutMe extends StatelessWidget {
               )
             ]),
             const SizedBox(height: 25),
-            Row(children: [
+            Wrap(children: [
               Ink(
                 decoration: const ShapeDecoration(
                   color: Colors.green,
@@ -130,7 +130,7 @@ class DSAboutMe extends StatelessWidget {
               )
             ]),
             const SizedBox(height: 25),
-            Row(children: [
+            Wrap(children: [
               Ink(
                 decoration: const ShapeDecoration(
                   color: Colors.green,
@@ -180,7 +180,7 @@ class DSAboutMe extends StatelessWidget {
   }
 
   Widget buildTail() {
-    return const Column(
+    return Column(
       children: [
         Text(
           '© 2021 Yunhwan Jeong. All rights reserved.',
